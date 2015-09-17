@@ -51,6 +51,7 @@ gem 'haml-rails', '~> 0.9.0'
 group :development, :test do
   gem 'rspec-rails', '~> 3.3.3'
   gem 'quiet_assets'
+  gem 'faker'
 end
 
 gem 'foundation-rails', '~> 5.5.2.1'

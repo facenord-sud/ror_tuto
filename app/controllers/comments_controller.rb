@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
   end
 
   private
-  def set_article_and_comment
+  def set_article
     @article = Article.find(params[:article_id])
   end
 

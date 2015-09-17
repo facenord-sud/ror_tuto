@@ -10,6 +10,17 @@
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .contain-to-grid
+      %nav.top-bar{'data-topbar' => '', role: :navigation}
+        %ul.title-area
+          %li.name
+            %h1
+              %a{herf: root_path} Home
+          %li.toggle-topbar.menu-icon
+            %a{href: '#'} Menu
+        %section.top-bar-section
+          %ul.left
+            %li= link_to 'All articles', articles_path
     .row
       .columns.small-12
         = yield
