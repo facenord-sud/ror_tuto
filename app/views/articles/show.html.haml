@@ -21,17 +21,9 @@
       %strong
         Comment:
         = comment.body
+        = link_to 'Delete', article_comment_path(comment.article, comment, action: :delete), data: { :confirm => 'Are you sure?' }, class: 'button alert tiny'
 - else
   %h3 No comments
 %h2 Add a comment
 
-= form_for [@article, @comment] do |f|
-  = render partial: 'includes/errors', locals: {object: @comment}
-
-  = f.label :commenter
-  = f.text_field :commenter
-
-  = f.label :body
-  = f.text_area :body
-
-  =f.submit class: 'button success'
+= render 'comments/form'

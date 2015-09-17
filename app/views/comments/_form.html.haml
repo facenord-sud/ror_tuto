@@ -1,0 +1,10 @@
+= form_for [@article, @comment] do |f|
+  = render partial: 'includes/errors', locals: {object: @comment}
+
+  = f.label :commenter
+  = f.text_field :commenter
+
+  = f.label :body
+  = f.text_area :body
+
+  =f.submit class: 'button success'
