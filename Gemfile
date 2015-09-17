@@ -32,7 +32,7 @@ gem 'puma'
 # gem 'capistrano-rails', group: :development
 
 gem 'rails_12factor', group: :production
-
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,7 +53,6 @@ gem 'haml-rails', '~> 0.9.0'
 group :development, :test do
   gem 'rspec-rails', '~> 3.3.3'
   gem 'quiet_assets'
-  gem 'faker'
 end
 
 gem 'foundation-rails', '~> 5.5.2.1'
