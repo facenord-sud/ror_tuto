@@ -14,10 +14,10 @@
       %tr
         %td= article.title
         %td= article.text
-        %td= link_to 'Show', article
-        %td= link_to 'Edit', edit_article_path(article)
-        %td= link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Show', article, class: 'button secondary tiny'
+        %td= link_to 'Edit', edit_article_path(article), class: 'button secondary tiny'
+        %td= link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'button error tiny'
 
 %br
 
-= link_to 'New Article', new_article_path
+= link_to 'New Article', new_article_path, class: 'button success'

@@ -1,0 +1,6 @@
+- if object.errors.any?
+  .panel.error
+    %h2= "#{pluralize(object.errors.count, 'error')} prohibited this article from being saved:"
+    %ul
+      - object.errors.full_messages.each do |msg|
+        %li= msg
